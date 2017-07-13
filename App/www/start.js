@@ -37,7 +37,7 @@
      client.send(message);
  }
  
- var delayMillis = 20; // Millisekunden
+ var delayMillis = 100; // Millisekunden
  
  var frucht = function(){
 //	 client.connect(options);
