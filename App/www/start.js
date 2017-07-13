@@ -37,7 +37,7 @@
      client.send(message);
  }
  
- var delayMillis = 200; // Millisekunden
+ var delayMillis = 20; // Millisekunden
  
  var frucht = function(){
 //	 client.connect(options);
@@ -83,7 +83,8 @@
 	}, delayMillis);
 }
 
-var waiting = function(){
+
+var waitingPeppermint = function(){
 	
 	//client.connect(options); 	//your code to be executed after 1 second
 	
@@ -97,6 +98,43 @@ var waiting = function(){
 			if (message.payloadString == "Tee trinkbereit"){
 				//alert("es lebt");
 				window.location.replace('enjoyPeppermint.html');
+			}
+		}
+	}, delayMillis);
+}
+var waitingFruit = function(){
+	
+	//client.connect(options); 	//your code to be executed after 1 second
+	
+	setTimeout(function() {
+		//publish('warte','haw/dmi/mt/its/ss17',2);
+		client.onMessageArrived = function (message) {
+			if (message.payloadString == "Fertig Gezogen"){
+				//alert("es lebt");
+				window.location.replace('carefulFruit.html');
+			}
+			if (message.payloadString == "Tee trinkbereit"){
+				//alert("es lebt");
+				window.location.replace('enjoyFruit.html');
+			}
+		}
+	}, delayMillis);
+}
+
+var waitingBlack = function(){
+	
+	//client.connect(options); 	//your code to be executed after 1 second
+	
+	setTimeout(function() {
+		//publish('warte','haw/dmi/mt/its/ss17',2);
+		client.onMessageArrived = function (message) {
+			if (message.payloadString == "Fertig Gezogen"){
+				//alert("es lebt");
+				window.location.replace('carefulBlack.html');
+			}
+			if (message.payloadString == "Tee trinkbereit"){
+				//alert("es lebt");
+				window.location.replace('enjoyBlack.html');
 			}
 		}
 	}, delayMillis);
