@@ -156,4 +156,3 @@ var exit = function(){
 		 window.location.replace('index.html'); //your code to be executed after 1 second
 	}, delayMillis);
 }
-
